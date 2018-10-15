@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Interval Scheduling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+    <div><img id="logo" src="unb.png" alt=""></div>
+    <h1>Agendamento por Intervalos</h1>
+    <h3>Interval Scheduling</h3>
+    <h2>Objetivo:</h2>
+    <h3>Agendar em um Conjunto Final o máximo de tarefas sem colisão de horário</h3>
+    <h2>Método:</h2>
+    <h4>0º Receber as tarefas, cada uma possue um StartTime e um EndTime.</h4> 
+    <h4>1º Criar o Conjunto Ordenado por meio da ordenação das tarefas por ordem crescente do seu EndTime.</h4>
+    <h4>2º Assumir que a primeira tarefa do Conjunto Ordenado, pertence ao Conjunto Final.</h4>
+    <h4>3º Comparar o StartTime de cada taréfa do Conjunto Ordenado com o EndTime da tarefa do Conjunto Final.</h4>
+    <h4>Caso STCO >= ETCF, a tarefa é adicionada ao Conjunto Final. Do contrário, a tarefa é excluida do Conjunto Final.</h4>
+    <h2>Simulador:</h2>
+    <div id="dados">
+    <input id="name" type="text" placeholder="Tarefa">
+    <input id="start" type="number" placeholder="Inicio(1 - 12)">
+    <input id="end" type="number" placeholder="Final(1 - 12)">
+
+    <button id="btn">Adicionar Tarefa</button>
+    </div>
+    <app id="app">
+        <br>
+        <img id="ruler" src="ruler.jpeg">
+        <ul id="list"></ul>
+        
+    </app>
+    <div>
+    <button id="solve">Ordenar</button>
+    <button id="solvetrue">Resolver</button>
+    <script src="main.js"></script>
+    </div>
+    
+    <footer>
+        Desenvolvido por <a href="http://github.com/fepas" target="_blank">@fepas</a>
+    </footer>
+
+</body>
+</html>
